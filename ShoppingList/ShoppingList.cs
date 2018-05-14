@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CommonTasksDLL;
 
-namespace ShoppingList
+namespace ShoppingList 
 {
     public class Item
     {
@@ -25,7 +25,7 @@ namespace ShoppingList
 
     }
     
-    class ShoppingList
+    class ShoppingList : CT
     {
         static void Main(string[] args)
         {
