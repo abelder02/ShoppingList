@@ -25,14 +25,17 @@ namespace ShoppingList
 
     }
     
-    class ShoppingList : CT
+    class ShoppingList : CT 
     {
         static void Main(string[] args)
         {
             CT.Header(out CT.LengthOfTopLine, "Shopping List", "");
-            Reset();
-            string fileName = @"C:\Users\Andrew\Desktop\Programming\C#\Visual Studio 2017\Projects\ShoppingList_Solution\ShoppingList.txt";
-
+            
+            string fileName = Directory.GetCurrentDirectory();
+            fileName = fileName.Replace(@"\ShoppingList\bin\Debug", @"\ShoppingList.txt");
+            
+            Preset(fileName);
+            
             IfAddedMoreItems:           
             StreamReader file = new StreamReader(fileName);
 
@@ -95,16 +98,16 @@ namespace ShoppingList
         public static void PrintCopy(string x)
         {
 
-            Console.WriteLine("What would you like to name your shopping list...");
+            Console.Write("What would you like to name your shopping list...");
             string nameOfCopy = Console.ReadLine();
             File.Copy(x, x.Replace("ShoppingList", nameOfCopy), true);
             Console.WriteLine("Done!");
         }
-        public static void Reset()
+        public static void Preset(string x)
         {
             //Puts back original
             string[] original = new string[] { "apple, 12, 0.64,", "peach, 7, 0.36,", "pear, 9, 0.47," };
-            File.WriteAllLines(@"C:\Users\Andrew\Desktop\Programming\C#\Visual Studio 2017\Projects\ShoppingList_Solution\ShoppingList.txt", original);
+            File.WriteAllLines(x, original);
 
         }
     }
