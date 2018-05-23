@@ -29,7 +29,7 @@ namespace ShoppingList
     {
         static void Main(string[] args)
         {
-            CT.Header(out CT.LengthOfTopLine, "Shopping List", "");
+            CT.Header("Shopping List", "");
             
             string fileName = Directory.GetCurrentDirectory();
             fileName = fileName.Replace(@"\ShoppingList\bin\Debug", @"\ShoppingList.txt");
@@ -69,8 +69,8 @@ namespace ShoppingList
                 goToTop++;
                 moreItems = "";
                 Console.WriteLine("What would you like to add to your shopping list");
-                NewItem.Add(CT.AskUserForString("the fruit name") + ", " + CT.AskUserForString("the quantity of that fruit") + ", "
-                + CT.AskUserForString("the price of each fruit") + ",");
+                NewItem.Add(CT.AskUserForString("the fruit name") + ", " + CT.AskUserForDouble("the quantity of that fruit") + ", "
+                + CT.AskUserForDouble("the price of each fruit") + ",");
                 CT.Color("white");
                 Console.Write("Do you want to add any more items enter (Y/N): ");
                 moreItems = Console.ReadLine().ToLower();

@@ -1,3 +1,5 @@
 apple, 12, 0.64,
 peach, 7, 0.36,
 pear, 9, 0.47,
+Tomatoes, 69, 6.79,
+Papayas, j, j,

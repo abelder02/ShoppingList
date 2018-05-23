@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonTasksDLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CommonTasksDLL.1.0.0\lib\net452\CommonTasksDLL.dll</HintPath>
+      <HintPath>..\packages\CommonTasksDLL.1.7.0\lib\net452\CommonTasksDLL.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
